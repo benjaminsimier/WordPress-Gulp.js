@@ -57,11 +57,18 @@ gulp.task('js', function() {
     }));
 });
 
+// PHP
+gulp.task('php', function() {
+  return gulp.src('./**/*.php')
+  .pipe(livereload())
+});
+
 // WATCH
 gulp.task('watch', function() {
+  gulp.watch('./**/*.php', gulp.series('php'));
+  gulp.watch('./sass/**/*.scss', gulp.series('sass'));
+  gulp.watch('./js/!(*.min)*.js', gulp.series('js'));
   livereload.listen({
     // port: 3005 // You can change the port here
   });
-  gulp.watch('./sass/**/*.scss', gulp.series('sass'));
-  gulp.watch('./js/!(*.min)*.js', gulp.series('js'));
 });
