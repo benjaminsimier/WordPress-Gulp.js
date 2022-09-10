@@ -1,0 +1,30 @@
+{
+  "name": "starter-bs",
+  "version": "1.0.0",
+  "description": "WordPress starter theme using Gulp from Benjamin Simier",
+  "author": "Benjamin Simier",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "scripts": {
+    "watch": "gulp watch",
+    "build": "gulp sass && gulp js",
+    "scss": "gulp sass",
+    "javascript": "gulp js"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.54.9"
+  }
+}
